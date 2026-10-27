@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T.E.A.R.S. Channel Live Stream Embed</title>
+  <style>
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .video-wrapper{position:relative;width:100%;max-width:100%;margin:0 auto;height:100%;}
+    .video-wrapper::before{content:"";display:block;padding-top:56.25%;}
+    #video_holder{position:absolute;top:0;left:0;width:100%;height:100%;}
+    @media (max-width:480px){.video-wrapper{max-width:100%;}}
+  </style>
+</head>
+<body>
+  <div class="video-wrapper">
+    <div id="video_holder"></div>
+  </div>
+  <script type="text/javascript" src="https://vod-lb-cdn.tvstartupengine.com/tvs-asset/library/clappr.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@latest/dist/hlsjs-playback.min.js"></script>
+  <script type="text/javascript">
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var clapprPlayer = new Clappr.Player({
+      "parentId": "#video_holder",
+      "source": "https://stream.ott.tvstartup.com/261dc2bf-9097-485f-8beb-88e8b3d303ff/master.m3u8",
+      "width": "100%",
+      "height": "100%",
+      "autoPlay": true,
+      "mute": true,
+      "playback": { "playsinline": true },
+      "plugins": isMobile ? [] : (typeof HlsjsPlayback !== 'undefined' ? [HlsjsPlayback] : [])
+    });
+  </script>
+</body>
+</html>

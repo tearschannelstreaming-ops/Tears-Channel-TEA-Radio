@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0b0f17"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#fbbf24"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle with Safe Margin -->
+  <rect width="512" height="512" rx="100" fill="#0b0f17"/>
+  <circle cx="256" cy="256" r="236" fill="url(#bg)" stroke="url(#gold)" stroke-width="8" filter="url(#glow)"/>
+  
+  <!-- Outer Ring Inscription Track -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="256" cy="256" r="160" fill="#0f172a" stroke="url(#gold)" stroke-width="4"/>
+
+  <!-- Center Monogram "T.E.A.R.S." Shield Symbol -->
+  <path d="M 256 120 L 340 180 L 340 280 C 340 340 256 385 256 385 C 256 385 172 340 172 280 L 172 180 Z" 
+        fill="url(#gold)" opacity="0.9" filter="url(#glow)"/>
+  <path d="M 256 135 L 325 188 L 325 275 C 325 325 256 365 256 365 C 256 365 187 325 187 275 L 187 188 Z" 
+        fill="#0b0f17"/>
+
+  <!-- Golden Crown / Star Burst -->
+  <polygon points="256,155 264,175 285,178 270,192 274,212 256,202 238,212 242,192 227,178 248,175" fill="url(#gold)"/>
+
+  <!-- T.E.A.R.S. Bold Lettering -->
+  <text x="256" y="270" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="52" fill="url(#gold)" text-anchor="middle" letter-spacing="4">TEARS</text>
+  <text x="256" y="305" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#38bdf8" text-anchor="middle" letter-spacing="3">CHANNEL</text>
+  <text x="256" y="328" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="12" fill="#94a3b8" text-anchor="middle" letter-spacing="2">TV • REAL ESTATE • RADIO</text>
+</svg>

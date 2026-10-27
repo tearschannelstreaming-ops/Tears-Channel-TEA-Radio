@@ -1,0 +1,6 @@
+{
+  "name": "T.E.A.R.S. Channel & T.E.A.R.adio",
+  "description": "Television, Entertainment, Advertisement, and Real Estate Streaming Network & 24/7 Live T.E.A.R.adio Broadcast.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
